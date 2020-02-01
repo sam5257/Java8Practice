@@ -14,7 +14,7 @@ public class FunctionalInterfaceWithLambda {
 
 @FunctionalInterface
 interface functional
-{  public void m1();
+{   void m1();
 }
 
 @FunctionalInterface
