@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamExample {
 
@@ -19,6 +20,13 @@ public class StreamExample {
 
         System.out.println(arrayList);
 
+        Stream<String> language = Stream.of("java", "python", "node", null, "ruby", null, "php");
+
+        //List<String> result = language.collect(Collectors.toList());
+
+        List<String> result = language.filter(x -> x!=null).collect(Collectors.toList());
+
+        result.forEach(System.out::println);
 
         //Print even numbers
       //  List<Integer> list=arrayList.stream().filter(i->i%2==0).filter(i->i%10==0).collect(Collectors.toList());
