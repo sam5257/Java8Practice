@@ -22,6 +22,7 @@ public class OptionalExample {
 
         s[0]="ram";
         s[1]="sam";
+        s[3]="null";
 
         System.out.println(s[0].toUpperCase()); // RAM
        // System.out.println(s[2].toUpperCase());   //NullPointerException
@@ -66,6 +67,9 @@ public class OptionalExample {
         // It returns true if value is present,
         // otherwise false
         System.out.println(value.isPresent());
+
+        Optional<String>  s1=Optional.of(null);
+        System.out.println(s1);
     }
 }
 //If a value is present,
